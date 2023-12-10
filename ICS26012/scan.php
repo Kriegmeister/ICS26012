@@ -89,16 +89,9 @@
                         $right = [];
                         $seek_sequence = [];
 
-                        // appending end values
-                        // which has to be visited
-                        // before reversing the direction
-                        if ($direction == "left") {
-                            array_push($left, 0);
-                        } elseif ($direction == "right") {
-                            array_push($right, $GLOBALS['disk_size'] - 1);
-                        }
 
-                        for ($i = 0; $i < count($arr); $i++) {
+
+                        for ($i = 0; $i < count($arr); $i++) { 
                             if ($arr[$i] < $head) {
                                 array_push($left, $arr[$i]);
                             }
@@ -117,7 +110,7 @@
                         $run = 2;
                         while ($run-- > 0) {
                             if ($direction == "left") {
-                                for ($i = count($left) - 1; $i >= 0; $i--) {
+                                for ($i = count($left) - 1; $i >= 0; $i--) { 
                                     $cur_track = $left[$i];
 
                                     // appending current track to seek sequence
@@ -204,13 +197,9 @@
                     // everything you need to manipulate is here
                     $arr =  $burstTimes;   //this is the queue
                     $head = $startingPosition;                                   //the head starting position
-                    //$direction = "left";                          //if left towards zero ; if right away from zero
+                    
 
                     SCAN($arr, $head, $direction);
-                    // Display the array of numbers, starting position, and direction
-                    /* echo "You entered the following numbers: " . implode(", ", $numbers) . "<br>";
-                    echo "Starting Position: " . htmlspecialchars($startingPosition) . "<br>";
-                    echo "Direction: " . htmlspecialchars($direction);*/
                 }
                 ?>
             </div>
