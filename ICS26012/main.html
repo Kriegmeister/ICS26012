@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="design.css" />
+    <title>Homepage</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!--Navbar-->
+      <nav class="navbar navbarr">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand page-title">ICS26012</a>
+          <div class="d-flex">
+            <a href="fcfs.php" class="nav-link me-4 navi">FCFS</a>
+            <a href="roundrobin.php" class="nav-link me-4 navi">Round Robin</a>
+            <a href="scan.php" class="nav-link me-4 navi">Scan</a>
+          </div>
+        </div>
+      </nav>
+      <!--Banner-->
+      <div
+        class="row banner d-flex justify-content-center align-content-center"
+      >
+        <h1 class="text-center text-title">Scheduling Algorithms</h1>
+        <p class="text-center name-text">
+          -Garma-Hernandez-Mallari-Sanchez-Valenzuela-
+        </p>
+      </div>
+
+      <div class="d-flex justify-content-center align-content-center">
+        <div class="card">
+          <img src="src/fcfs.png" class="card-img-top" alt="fcfs" />
+          <div class="card-body">
+            <h5 class="card-title"><b>First Come First Serve</b></h5>
+            <p class="card-text">
+              FCFS is a non-preemptive scheduling algorithm that prioritizes
+              processes based on their arrival order, with the first arriving
+              process being the first to be executed.
+            </p>
+            <a href="fcfs.php" class="btn">Try FCFS Algorithm</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="src/RR.png" class="card-img-top" alt="roundrobin" />
+          <div class="card-body">
+            <h5 class="card-title"><b>Round-Robin</b></h5>
+            <p class="card-text">
+              This is a preemptive scheduling algorithm where each process is
+              assigned a fixed time quantum, and the CPU switches between
+              processes in a circular order until all processes are completed.
+            </p>
+            <a href="roundrobin.php" class="btn">Try Round-Robin Algorithm</a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="src/scan.png" class="card-img-top" alt="scan" />
+          <div class="card-body">
+            <h5 class="card-title"><b>Scan</b></h5>
+            <p class="card-text">
+              Also known as the Elevator algorithm, this is a disk scheduling
+              algorithm that services requests in a one-way, back-and-forth
+              motion, like a scanning motion of an elevator.
+            </p>
+            <a href="scan.php" class="btn">Try Scan Algorithm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
